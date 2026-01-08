@@ -45,6 +45,52 @@ section { padding: 2rem 9%; }
 .review .box .user h3 { font-size: 2rem; color: var(--black); }
 .review .box p { font-size: 1.5rem; color: var(--light-color); line-height: 2; }
 
+/*contact form styling*/
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--border);
+}
+
+.contact form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .inputBox input,
+.contact form textarea {
+    width: 100%;
+    background: #fff;
+    border-radius: .5rem;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    margin: .7rem 0;
+    border: var(--border);
+}
+
+.contact form .inputBox input {
+    width: 49%;
+}
+
+.contact form textarea {
+    height: 20rem;
+    resize: none;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .contact form .inputBox input {
+        width: 100%;
+    }
+}
+
 /* Theme Toggler */
 .theme-toggler { position: fixed; top: 10rem; right: -20rem; background: #fff; z-index: 1000; width: 20rem; text-align: center; border: var(--border); padding: 2rem; }
 .theme-toggler.active { right: 0; }
