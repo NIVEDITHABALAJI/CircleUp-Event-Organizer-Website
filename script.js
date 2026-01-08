@@ -52,4 +52,28 @@ var reviewSwiper = new Swiper(".review-slider", {
     autoplay: { delay: 5000, disableOnInteraction: false },
 });
 
+// Contact Form Submission Logic
+const contactForm = document.querySelector('#contact-form');
+
+if(contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const data = new FormData(contactForm);
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            alert('Thanks for contacting CircleUp! We will get back to you shortly.');
+            contactForm.reset();
+        } else {
+            alert('Oops! There was a problem submitting your form');
+        }
+    });
+}
 console.log("%cCircleUp Loaded Successfully", "color: #3498db; font-weight: bold;");
