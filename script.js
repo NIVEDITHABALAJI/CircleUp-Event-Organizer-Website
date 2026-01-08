@@ -1,3 +1,4 @@
+// Main functionality for circleup event organizer website 
 let menu = document.querySelector("#menu-bars");
 let navbar = document.querySelector(".navbar");
 
@@ -26,6 +27,8 @@ document.querySelectorAll(".theme-toggler .theme-btn").forEach((btn) => {
     };
 });
 
+// swiper sliders initialization
+// Home slider
 var homeSwiper = new Swiper(".home-slider", {
     effect: "coverflow",
     grabCursor: true,
@@ -35,11 +38,12 @@ var homeSwiper = new Swiper(".home-slider", {
     autoplay: { delay: 3000, disableOnInteraction: false },
 });
 
+// Review slider
 var reviewSwiper = new Swiper(".review-slider", {
     slidesPerView: 1,
     grabCursor: true,
     loop: true,
-    spaceBetween: 10,
+    spaceBetween: 20,
     breakpoints: {
         0: { slidesPerView: 1 },
         700: { slidesPerView: 2 },
