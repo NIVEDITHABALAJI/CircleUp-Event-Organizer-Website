@@ -75,5 +75,27 @@ if(contactForm) {
             alert('Oops! There was a problem submitting your form');
         }
     });
+
+    // Scroll Reveal Logic
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150; // Triggers when the element is 150px into view
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        }
+    }
+}
+
+// Check on scroll
+window.addEventListener("scroll", reveal);
+
+// Initial check on load (in case user starts halfway down)
+reveal();
+
 }
 console.log("%cCircleUp Loaded Successfully", "color: #3498db; font-weight: bold;");
